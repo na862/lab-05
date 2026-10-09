@@ -26,6 +26,9 @@ class MainActivity : ComponentActivity() {
                         onUpdateCity = { oldCity, updatedCity ->
                             cityRepository.updateCity(oldCity, updatedCity)
                         },
+                        onDeleteCity = {cityToDelete ->
+                            cityRepository.deleteCity(cityToDelete)
+                        },
                         modifier = Modifier.padding(innerPadding)
                     )
                 }
